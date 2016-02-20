@@ -17,7 +17,6 @@ app.use(function(req, res, next) {
 app.get('/historia',function(req,res){
 
 var id = req.query.id;
-console.log(id);
 switch(id){
 	case '1':
 		var historia = [{"capa":"sp2","bandera":"br","cuidad":"Sao Paulo, Brasil","titulo1":"Como es vivir en Sao Paulo,","titulo2":"la mayor cuidad de America Latina.","fecha":"06 de marzo, 2016."}];
