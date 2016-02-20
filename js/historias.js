@@ -13,6 +13,7 @@ $(document).ready(function() {
               $('#titulo2').text(historia[0].titulo2);
               $('#bandera').addClass('flag-icon-'+historia[0].bandera);
               $('#capaHistoria').css('background-image','url(img/'+historia[0].capa+'.jpg)');
+              $('#fecha').text(historia[0].fecha);
         },
         error: function(){
             
