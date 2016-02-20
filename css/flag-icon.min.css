@@ -1,0 +1,90 @@
+.flag-icon-background {
+  background-size: contain;
+  background-position: 50%;
+  background-repeat: no-repeat;
+}
+.flag-icon {
+  background-size: contain;
+  background-position: 50%;
+  background-repeat: no-repeat;
+  position: relative;
+  display: inline-block;
+  width: 1.33333333em;
+  line-height: 1em;
+}
+.flag-icon:before {
+  content: "\00a0";
+}
+.flag-icon.flag-icon-squared {
+  width: 1em;
+}
+
+.flag-icon-ar {
+  background-image: url(../flags/4x3/ar.svg);
+}
+.flag-icon-ar.flag-icon-squared {
+  background-image: url(../flags/1x1/ar.svg);
+}
+
+.flag-icon-br {
+  background-image: url(../flags/4x3/br.svg);
+}
+.flag-icon-br.flag-icon-squared {
+  background-image: url(../flags/1x1/br.svg);
+}
+
+.flag-icon-bo {
+  background-image: url(../flags/4x3/bo.svg);
+}
+.flag-icon-bo.flag-icon-squared {
+  background-image: url(../flags/1x1/bo.svg);
+}
+
+.flag-icon-cl {
+  background-image: url(../flags/4x3/cl.svg);
+}
+.flag-icon-cl.flag-icon-squared {
+  background-image: url(../flags/1x1/cl.svg);
+}
+
+.flag-icon-co {
+  background-image: url(../flags/4x3/co.svg);
+}
+.flag-icon-co.flag-icon-squared {
+  background-image: url(../flags/1x1/co.svg);
+}
+
+.flag-icon-cr {
+  background-image: url(../flags/4x3/cr.svg);
+}
+.flag-icon-cr.flag-icon-squared {
+  background-image: url(../flags/1x1/cr.svg);
+}
+
+.flag-icon-es {
+  background-image: url(../flags/4x3/es.svg);
+}
+.flag-icon-es.flag-icon-squared {
+  background-image: url(../flags/1x1/es.svg);
+}
+
+.flag-icon-gb {
+  background-image: url(../flags/4x3/gb.svg);
+}
+.flag-icon-gb.flag-icon-squared {
+  background-image: url(../flags/1x1/gb.svg);
+}
+
+.flag-icon-uy {
+  background-image: url(../flags/4x3/uy.svg);
+}
+.flag-icon-uy.flag-icon-squared {
+  background-image: url(../flags/1x1/uy.svg);
+}
+
+.flag-icon-pe {
+  background-image: url(../flags/4x3/pe.svg);
+}
+.flag-icon-pe.flag-icon-squared {
+  background-image: url(../flags/1x1/pe.svg);
+}

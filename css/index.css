@@ -1,0 +1,65 @@
+.cursor{
+	cursor:pointer;
+}
+
+.navbar{
+	background-color: transparent;
+	border-style: none;
+	/** box-shadow: 0 2px 3px rgba(0,0,0,.4);**/
+}
+
+.navbar-inverse .navbar-nav>.open>a, .navbar-inverse .navbar-nav>.open>a:focus, .navbar-inverse .navbar-nav>.open>a:hover {
+	background-color:gray;
+}
+
+.navbar-inverse .navbar-nav>li>a{
+	color: white;
+	font-size:1.3em;
+}
+
+.navbar-nav li:hover {
+	background-color:#b8b8b8;
+}
+
+
+
+.mensaje{
+	position: absolute;
+	left: 12.5%;
+	text-align: center;
+	width:75%;
+	margin:auto;
+
+	top:30%;
+	/**	background-color: black;
+ background:rgba(0,0,0,0.5);**/
+
+}
+
+.mensaje h1{
+	color:white;
+	font-size: 3.5em;
+}
+
+.navbar-collapse{
+	float:right;
+	font-family:"Helvetica Neue",Helvetica,Arial,sans-serif;
+	font-weight:300;
+}
+
+.icono{
+	max-width:100%;
+}
+
+.ir-arriba{
+	float:right;
+}
+
+
+
+
+@media only screen and (min-width : 320px) and (max-width : 768px) {
+.mensaje h1{
+	font-size: 2.5em;
+}
+}
