@@ -94,7 +94,18 @@ app.get('/pais', function(req, res) {
                     "id": "1",
                     "titulo": "Como es vivir en São Paulo, la mayor cuidad de América Latina.",
                     "foto": "sp1"
-                }]
+                },
+                {
+                    "id": "2",
+                    "titulo": "¿Qué hacer? ¿Qué conocer? en Río de Janeiro. La Cidade Maravilhosa.",
+                    "foto": "rio1"
+                },
+                {
+                    "id": "3",
+                    "titulo": "Santos, la cuidad del rey Pelé y Neymar Jr.",
+                    "foto": "santos1"
+                }
+                ]
             }];
             res.contentType('application/json');
             res.send(JSON.stringify(pais));

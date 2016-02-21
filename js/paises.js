@@ -9,7 +9,7 @@ $(document).ready(function() {
         data: {id: paisId},
         success: function(pais){
             if(pais!=='0'){
-                console.log(pais[0].historias[0].id);
+                console.log(pais[0].historias[0].titulo);
             $('#nombrePais').text(pais[0].cuidad);
              $('#titulo1').text(pais[0].pais);
               $('#bandera').addClass('flag-icon-'+pais[0].bandera);
