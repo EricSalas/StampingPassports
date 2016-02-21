@@ -72,7 +72,7 @@ app.get('/pais', function(req, res) {
                 "cuidad": "Ushuaia, fin del mundo. Argentina "
             }];
             res.contentType('application/json');
-            res.send(JSON.stringify(historia));
+            res.send(JSON.stringify(pais));
             break;
         case '2':
             var pais = [{
@@ -81,7 +81,7 @@ app.get('/pais', function(req, res) {
                 "cuidad": "Copacabana, Bolivia"
             }];
             res.contentType('application/json');
-            res.send(JSON.stringify(historia));
+            res.send(JSON.stringify(pais));
             break;
 
         case '3':
@@ -97,7 +97,7 @@ app.get('/pais', function(req, res) {
                 }]
             }];
             res.contentType('application/json');
-            res.send(JSON.stringify(historia));
+            res.send(JSON.stringify(pais));
             break;
         default:
             console.log('llegue');
