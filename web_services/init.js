@@ -15,7 +15,6 @@ app.use(function(req, res, next) {
 });
 
 app.get('/historia',function(req,res){
-
 var id = req.query.id;
 switch(id){
 	case '1':
@@ -35,6 +34,33 @@ switch(id){
                 res.send(JSON.stringify(historia));
                 break;
 	default:
+	console.log('llegue');
+		res.send('0');
+}
+});
+
+
+app.get('/pais',function(req,res){
+var id = req.query.id;
+switch(id){
+	case '1':
+		var historia = [{"capa":"sp2","bandera":"ar","pais":"Argentina"}];
+		res.contentType('application/json');
+		res.send(JSON.stringify(historia));
+		break;
+     case '2':
+                 var historia = [{"capa":"rio2","bandera":"br","cuidad":"Rio de Janeiro, Brasil","titulo1":"¿Qué hacer? ¿Qué conocer? en Río de Janeiro.","titulo2":"La Cidade Maravilhosa.","fecha":" 6 de marzo, 2016."}];
+                res.contentType('application/json');
+                res.send(JSON.stringify(historia));
+                break;
+
+         case '3':
+                 var historia = [{"capa":"santos2","bandera":"br","cuidad":"Santos, Brasil","titulo1":"Santos,","titulo2":"la cuidad del rey Pelé y Neymar Jr.","fecha":"6 de marzo, 2016."}];
+                res.contentType('application/json');
+                res.send(JSON.stringify(historia));
+                break;
+	default:
+	console.log('llegue');
 		res.send('0');
 }
 });
