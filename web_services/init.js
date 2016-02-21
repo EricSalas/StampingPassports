@@ -49,13 +49,13 @@ switch(id){
 		res.send(JSON.stringify(historia));
 		break;
      case '2':
-                 var historia = [{"capa":"rio2","bandera":"br","cuidad":"Rio de Janeiro, Brasil","titulo1":"¿Qué hacer? ¿Qué conocer? en Río de Janeiro.","titulo2":"La Cidade Maravilhosa.","fecha":" 6 de marzo, 2016."}];
+                 var historia = [{"capa":"bolivia1","bandera":"bo","cuidad":"Copacabana, Bolivia"}];
                 res.contentType('application/json');
                 res.send(JSON.stringify(historia));
                 break;
 
          case '3':
-                 var historia = [{"capa":"santos2","bandera":"br","cuidad":"Santos, Brasil","titulo1":"Santos,","titulo2":"la cuidad del rey Pelé y Neymar Jr.","fecha":"6 de marzo, 2016."}];
+                 var historia = [{"capa":"fernando-noronha","bandera":"br","cuidad":"Santos, Brasil","titulo1":"Santos,","titulo2":"la cuidad del rey Pelé y Neymar Jr.","fecha":"6 de marzo, 2016."}];
                 res.contentType('application/json');
                 res.send(JSON.stringify(historia));
                 break;
