@@ -44,7 +44,7 @@ app.get('/pais',function(req,res){
 var id = req.query.id;
 switch(id){
 	case '1':
-		var historia = [{"capa":"sp2","bandera":"ar","pais":"Argentina"}];
+		var historia = [{"capa":"argentina1","bandera":"ar","pais":"Argentina","cuidad":"Ushuaia, fin del mundo. Argentina "}];
 		res.contentType('application/json');
 		res.send(JSON.stringify(historia));
 		break;

@@ -9,9 +9,8 @@ $(document).ready(function() {
         data: {id: historiaId},
         success: function(historia){
             if(historia!=='0'){
-            $('#nombreCuidad').text(historia[0].cuidad);
-             $('#titulo1').text(historia[0].titulo1);
-              $('#titulo2').text(historia[0].titulo2);
+            $('#nombrePais').text(historia[0].cuidad);
+             $('#titulo1').text(historia[0].pais);
               $('#bandera').addClass('flag-icon-'+historia[0].bandera);
               $('#capaHistoria').css('background-image','url(img/'+historia[0].capa+'.jpg)');
               $('#fecha').text(historia[0].fecha);
