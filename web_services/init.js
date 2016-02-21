@@ -55,7 +55,7 @@ switch(id){
                 break;
 
          case '3':
-                 var historia = [{"capa":"fernando-noronha","bandera":"br","cuidad":"Santos, Brasil","titulo1":"Santos,","titulo2":"la cuidad del rey Pelé y Neymar Jr.","fecha":"6 de marzo, 2016."}];
+                 var historia = [{"capa":"fernando-noronha","bandera":"br","cuidad":"Fernando Noronha, Brasil","pais":"Brasil"}];
                 res.contentType('application/json');
                 res.send(JSON.stringify(historia));
                 break;
