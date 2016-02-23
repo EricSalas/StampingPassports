@@ -78,6 +78,11 @@ console.log(file[i].username);
 });
 
 
+function leerJSON(id){
+    console.log(id);
+}
+
+
 app.get('/pais', function(req, res) {
     var id = req.query.id;
     switch (id) {
@@ -102,28 +107,7 @@ app.get('/pais', function(req, res) {
             break;
 
         case '3':
-            var pais = [{
-                "capa": "fernando-noronha",
-                "bandera": "br",
-                "cuidad": "Fernando Noronha, Brasil",
-                "pais": "Brasil",
-                "historias": [{
-                    "id": "1",
-                    "titulo": "Como es vivir en São Paulo, la mayor cuidad de América Latina.",
-                    "foto": "sp1"
-                },
-                {
-                    "id": "2",
-                    "titulo": "¿Qué hacer? ¿Qué conocer? en Río de Janeiro. La Cidade Maravilhosa.",
-                    "foto": "rio1"
-                },
-                {
-                    "id": "3",
-                    "titulo": "Santos, la cuidad del rey Pelé y Neymar Jr.",
-                    "foto": "santos1"
-                }
-                ]
-            }];
+           leerJSON(12);
             res.contentType('application/json');
             res.send(JSON.stringify(pais));
             break;
