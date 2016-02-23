@@ -60,26 +60,22 @@ app.get('/historia', function(req, res) {
     }
 });
 
-app.get('/json',function(req,res){
+function leerJSON(archivo){
 
 var fs = require('fs');
 var obj;
-fs.readFile('./dummy.json','utf8',function(err,data){
+fs.readFile('./'+archivo+'.json','utf8',function(err,data){
 if(err) throw err;
 var file = JSON.parse(data);
+console.log(file);
 
+/**
 for (var i=0; i<file.length; i++){
 console.log(file[i].username);
-}
+}**/
 
 });
 
-
-});
-
-
-function leerJSON(id){
-    console.log(id);
 }
 
 
@@ -107,7 +103,7 @@ app.get('/pais', function(req, res) {
             break;
 
         case '3':
-           leerJSON(12);
+           leerJSON('brasil');
             res.contentType('application/json');
             res.send(JSON.stringify(pais));
             break;
