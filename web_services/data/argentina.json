@@ -1,4 +1,6 @@
-[
-{"id":1,"username":"esalas.0691"},
-{"id":2,"username":"bsalas.0694"}
-]
+{
+    "capa": "argentina1",
+    "bandera": "ar",
+    "pais": "Argentina",
+    "cuidad": "Ushuaia, fin del mundo. Argentina "
+}

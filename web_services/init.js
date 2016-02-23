@@ -67,8 +67,6 @@ var obj;
 fs.readFile('./data/'+archivo+'.json','utf8',function(err,data){
 if(err) throw err;
 var file = JSON.parse(data);
-console.log(file.historias[2].titulo);
-
 
 });
 
@@ -79,27 +77,18 @@ app.get('/pais', function(req, res) {
     var id = req.query.id;
     switch (id) {
         case '1':
-            var pais = [{
-                "capa": "argentina1",
-                "bandera": "ar",
-                "pais": "Argentina",
-                "cuidad": "Ushuaia, fin del mundo. Argentina "
-            }];
+            var pais = leerJSON('argentina');
             res.contentType('application/json');
             res.send(JSON.stringify(pais));
             break;
         case '2':
-            var pais = [{
-                "capa": "bolivia1",
-                "bandera": "bo",
-                "cuidad": "Copacabana, Bolivia"
-            }];
+            var pais = leerJSON('bolivia');
             res.contentType('application/json');
             res.send(JSON.stringify(pais));
             break;
 
         case '3':
-           leerJSON('brasil');
+           var pais = leerJSON('brasil');
             res.contentType('application/json');
             res.send(JSON.stringify(pais));
             break;
