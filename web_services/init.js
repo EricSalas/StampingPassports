@@ -64,15 +64,11 @@ function leerJSON(archivo){
 
 var fs = require('fs');
 var obj;
-fs.readFile('./'+archivo+'.json','utf8',function(err,data){
+fs.readFile('./data/'+archivo+'.json','utf8',function(err,data){
 if(err) throw err;
 var file = JSON.parse(data);
-console.log(file);
+console.log(file.historias[2].titulo);
 
-/**
-for (var i=0; i<file.length; i++){
-console.log(file[i].username);
-}**/
 
 });
 
