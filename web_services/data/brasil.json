@@ -3,7 +3,8 @@
     "bandera": "br",
     "cuidad": "Fernando Noronha, Brasil",
     "pais": "Brasil",
-    "historias": [{
+    "historias": [
+        {
         "id": "1",
         "titulo": "Como es vivir en São Paulo, la mayor cuidad de América Latina.",
         "foto": "sp1"
@@ -15,5 +16,16 @@
         "id": "3",
         "titulo": "Santos, la cuidad del rey Pelé y Neymar Jr.",
         "foto": "santos1"
-    }]
+    },
+    {
+        "id": "3",
+        "titulo": "Santos, la cuidad del rey Pelé y Neymar Jr.",
+        "foto": "santos1"
+    },
+    {
+        "id": "3",
+        "titulo": "Santos, la cuidad del rey Pelé y Neymar Jr.",
+        "foto": "santos1"
+    }
+    ]
 }
