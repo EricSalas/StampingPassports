@@ -76,14 +76,11 @@ app.get('/pais', function(req, res) {
     var id = req.query.id;
     switch (id) {
         case '1':
-            var pais = leerJSON('argentina');
-            res.contentType('application/json');
-            res.send(JSON.stringify(pais));
+            leerJSON('argentina',res);
             break;
         case '2':
-            var pais = leerJSON('bolivia');
-            res.contentType('application/json');
-            res.send(JSON.stringify(pais));
+             var pais = leerJSON('bolivia',res);
+            //res.send(JSON.stringify(pais));
             break;
 
         case '3':

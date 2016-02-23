@@ -11,13 +11,13 @@ $(document).ready(function() {
         },
         success: function(pais) {
             if (pais !== '0') {
-                $('#nombrePais').text(pais[0].cuidad);
-                $('#titulo1').text(pais[0].pais);
-                $('#bandera').addClass('flag-icon-' + pais[0].bandera);
-                $('#capaHistoria').css('background-image', 'url(img/' + pais[0].capa + '.jpg)');
+                $('#nombrePais').text(pais.cuidad);
+                $('#titulo1').text(pais.pais);
+                $('#bandera').addClass('flag-icon-' + pais.bandera);
+                $('#capaHistoria').css('background-image', 'url(img/' + pais.capa + '.jpg)');
                 var indice = 0;
                 var html = "";
-                $.each(pais[0].historias, function(i, h) {
+                $.each(pais.historias, function(i, h) {
                     html += '<div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">' +
                         '<div class="panel panel-default">' +
                         '<div class="panel-heading">' +
