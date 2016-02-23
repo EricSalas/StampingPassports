@@ -17,6 +17,7 @@ $(document).ready(function() {
                 $('#capaHistoria').css('background-image', 'url(img/' + pais.capa + '.jpg)');
                 var indice = 0;
                 var html = "";
+                if(pais['historias']!==undefined){
                 $.each(pais.historias, function(i, h) {
                     html += '<div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">' +
                         '<div class="panel panel-default">' +
@@ -32,6 +33,7 @@ $(document).ready(function() {
                 });
 
                 $('.historias').html('').html(html);
+            }
             }
         },
         error: function() {
