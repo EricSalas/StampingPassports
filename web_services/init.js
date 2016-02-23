@@ -60,6 +60,23 @@ app.get('/historia', function(req, res) {
     }
 });
 
+app.get('/json',function(req,res){
+
+var fs = require('fs');
+var obj;
+fs.readFile('./dummy.json','utf8',function(err,data){
+if(err) throw err;
+var file = JSON.parse(data);
+
+for (var i=0; i<file.length; i++){
+console.log(file[i].username);
+}
+
+});
+
+
+});
+
 
 app.get('/pais', function(req, res) {
     var id = req.query.id;
