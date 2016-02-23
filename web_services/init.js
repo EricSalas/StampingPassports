@@ -60,14 +60,13 @@ app.get('/historia', function(req, res) {
     }
 });
 
-function leerJSON(archivo){
-
+function leerJSON(archivo,res){
 var fs = require('fs');
-var obj;
 fs.readFile('./data/'+archivo+'.json','utf8',function(err,data){
-if(err) throw err;
+if(!err){
 var file = JSON.parse(data);
-
+res.contentType('application/json');
+res.send(file);}
 });
 
 }
@@ -88,9 +87,7 @@ app.get('/pais', function(req, res) {
             break;
 
         case '3':
-           var pais = leerJSON('brasil');
-            res.contentType('application/json');
-            res.send(JSON.stringify(pais));
+           var pais = leerJSON('brasil',res);
             break;
         default:
             console.log('llegue');
