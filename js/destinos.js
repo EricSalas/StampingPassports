@@ -5,7 +5,7 @@ $(document).ready(function() {
     
     $.ajax({
         method: 'get',
-        url: 'http://ec2-52-10-12-157.us-west-2.compute.amazonaws.com:3500/historia',
+        url: 'http://ec2-52-10-12-157.us-west-2.compute.amazonaws.com:3500/destino',
         data: {id: historiaId},
         success: function(historia){
             if(historia!=='0'){

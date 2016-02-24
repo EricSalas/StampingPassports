@@ -14,7 +14,7 @@ app.use(function(req, res, next) {
     next();
 });
 
-app.get('/historia', function(req, res) {
+app.get('/destino', function(req, res) {
     var id = req.query.id;
     switch (id) {
         case '1':
@@ -63,6 +63,7 @@ app.get('/historia', function(req, res) {
 });
 
 function leerJSON(archivo, res, tipo, id) {
+    console.log('leer archivo');
     var fs = require('fs');
     fs.readFile('./data/' + archivo + '.json', 'utf8', function(err, data) {
         if (!err) {
