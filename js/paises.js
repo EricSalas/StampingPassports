@@ -19,7 +19,7 @@ $(document).ready(function() {
                 var html = "";
                 if(pais['historias']!==undefined){
                 $.each(pais.historias, function(i, h) {
-                    html += '<div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">' +
+                    html += '<div class="col-lg-3 col-md-3 col-sm-6 col-xs-12 cursor destino" id="'+h.id+'">' +
                         '<div class="panel panel-default">' +
                         '<div class="panel-heading">' +
                         '<h3 class="panel-title">' + h.titulo + '</h3>' +
@@ -30,10 +30,17 @@ $(document).ready(function() {
                         '<div class="panel-footer">Leer historia</div>' +
                         '</div>' +
                         '</div>'
+                        indice+=1;
+                        if(indice==4){
+                            html = '<div class="row">'+html+'</div>';
+                            indice = 0;
+                        }
                 });
 
-                $('.historias').html('').html(html);
+                $('.destinos').html('').html(html);
             }
+            }else{
+                  window.location = '/';
             }
         },
         error: function() {
@@ -43,6 +50,13 @@ $(document).ready(function() {
     });
 
 
-
+$('html').on('click','.destino',function(event){
+    var destino = $(event.target);
+    var id = destino.parents('.destino').attr('id');
+    if(id!==undefined){
+    window.location = 'destinos.html?id='+id;
+    }
+    
+});
 
 });

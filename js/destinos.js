@@ -16,7 +16,7 @@ $(document).ready(function() {
               $('#capaHistoria').css('background-image','url(img/'+historia[0].capa+'.jpg)');
               $('#fecha').text(historia[0].fecha);
             }else{
-                window.location = 'index.html';
+                window.location = '/';
             }
         },
         error: function(){

@@ -18,6 +18,7 @@ app.get('/historia', function(req, res) {
     var id = req.query.id;
     switch (id) {
         case '1':
+            /**
             var historia = [{
                 "capa": "sp2",
                 "bandera": "br",
@@ -25,9 +26,10 @@ app.get('/historia', function(req, res) {
                 "titulo1": "Como es vivir en Sao Paulo,",
                 "titulo2": "la mayor cuidad de America Latina.",
                 "fecha": "06 de marzo, 2016."
-            }];
-            res.contentType('application/json');
-            res.send(JSON.stringify(historia));
+            }];**/
+           /** res.contentType('application/json');
+            res.send(JSON.stringify(historia));**/
+            leerJSON('historias.json',res, id);
             break;
         case '2':
             var historia = [{
@@ -60,31 +62,38 @@ app.get('/historia', function(req, res) {
     }
 });
 
-function leerJSON(archivo,res){
-var fs = require('fs');
-fs.readFile('./data/'+archivo+'.json','utf8',function(err,data){
-if(!err){
-var file = JSON.parse(data);
-res.contentType('application/json');
-res.send(file);}
-});
-
+function leerJSON(archivo, res, tipo, id) {
+    var fs = require('fs');
+    fs.readFile('./data/' + archivo + '.json', 'utf8', function(err, data) {
+        if (!err) {
+            var file = JSON.parse(data);
+            switch(tipo){
+                case 1:
+                    console.log(file[id-1]);
+                    
+                    
+                    
+                    
+            }
+            res.contentType('application/json');
+            res.send(file);
+        }
+    });
 }
-
 
 app.get('/pais', function(req, res) {
     var id = req.query.id;
     switch (id) {
         case '1':
-            leerJSON('argentina',res);
+            leerJSON('argentina', res);
             break;
         case '2':
-             var pais = leerJSON('bolivia',res);
+            var pais = leerJSON('bolivia', res);
             //res.send(JSON.stringify(pais));
             break;
 
         case '3':
-           var pais = leerJSON('brasil',res);
+            var pais = leerJSON('brasil', res);
             break;
         default:
             console.log('llegue');
