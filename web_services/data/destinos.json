@@ -10,13 +10,13 @@
     "texto":""
 }, {
     "capa": "rio2",
-    "img":"rio1"
+    "img":"rio1",
     "bandera": "br",
     "cuidad": "Rio de Janeiro, Brasil",
     "titulo1": "¿Qué hacer? ¿Qué conocer? en Río de Janeiro.",
     "titulo2": "La Cidade Maravilhosa.",
     "resumen": "Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.",
-    "fecha": " 6 de marzo, 2016."
+    "fecha": " 6 de marzo, 2016.",
     "texto":""
 }, {
     "capa": "santos2",
@@ -26,6 +26,6 @@
     "titulo1": "Santos,",
     "titulo2": "la cuidad del rey Pelé y Neymar Jr.",
     "resumen": "Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.",
-    "fecha": "6 de marzo, 2016."
+    "fecha": "6 de marzo, 2016.",
     "texto":""
 }]
