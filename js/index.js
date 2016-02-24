@@ -12,7 +12,7 @@ $(document).ready(function() {
                         html += '<hr class="featurette-divider">' +
                             '<div class="row featurette">' +
                             '<div class="col-md-7">' +
-                            '<h2 class="featurette-heading"><span class="flag-icon flag-icon-' + destinos[i].bandera + '"></span>' + destinos[i].titulo1 + '<span class="text-muted">' + destinos[i].titulo2 + '</span></h2>' +
+                            '<h2 class="featurette-heading"><span class="flag-icon flag-icon-' + destinos[i].bandera + '"> </span>' + destinos[i].titulo1 + '<span class="text-muted">' + destinos[i].titulo2 + '</span></h2>' +
                             '<p class="lead">' + destinos[i].resumen + '</p>' +
                             '</div>' +
                             '<div class="col-md-5">' +
