@@ -14,8 +14,8 @@ app.use(function(req, res, next) {
     next();
 });
 
-app.get('/ultimosDestinos',function(req,res){
-      leerJSON('destinos', res, 3);
+app.get('/ultimosDestinos', function(req, res) {
+    leerJSON('destinos', res, 3);
 });
 
 app.get('/destino', function(req, res) {
@@ -47,7 +47,7 @@ function leerJSON(archivo, res, tipo, id) {
                 case 1:
                     /**Lectura de archivo de destinos en donde debe responderse solo con la data del destino**/
                     resp = file[id - 1];
-                    if(resp===undefined){
+                    if (resp === undefined) {
                         resp = '0';
                     }
                 case 2:
@@ -55,11 +55,10 @@ function leerJSON(archivo, res, tipo, id) {
                     resp = file;
                 case 3:
                     /**Lectura de archivo de destinos, pero solo deben de ir los tres ultimos objetos**/
-                    resp = file.slice(0,2);
-var tam = file.length;
-resp = file.slice((tam-3),tam+1);
-                    
-                    
+                    var tam = file.length;
+                    resp = file.slice((tam - 3), tam + 1);
+
+
             }
             res.contentType('application/json');
             res.send(resp);
