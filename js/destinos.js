@@ -9,12 +9,12 @@ $(document).ready(function() {
         data: {id: historiaId},
         success: function(historia){
             if(historia!=='0'){
-            $('#nombreCuidad').text(historia[0].cuidad);
-             $('#titulo1').text(historia[0].titulo1);
-              $('#titulo2').text(historia[0].titulo2);
-              $('#bandera').addClass('flag-icon-'+historia[0].bandera);
-              $('#capaHistoria').css('background-image','url(img/'+historia[0].capa+'.jpg)');
-              $('#fecha').text(historia[0].fecha);
+            $('#nombreCuidad').text(historia.cuidad);
+             $('#titulo1').text(historia.titulo1);
+              $('#titulo2').text(historia.titulo2);
+              $('#bandera').addClass('flag-icon-'+historia.bandera);
+              $('#capaHistoria').css('background-image','url(img/'+historia.capa+'.jpg)');
+              $('#fecha').text(historia.fecha);
             }else{
                 window.location = '/';
             }
