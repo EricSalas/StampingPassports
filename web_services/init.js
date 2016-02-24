@@ -37,13 +37,14 @@ function leerJSON(archivo, res, tipo, id) {
     var fs = require('fs');
     fs.readFile('./data/' + archivo + '.json', 'utf8', function(err, data) {
         if (!err) {
+var temp = '';
             var file = JSON.parse(data);
             switch(tipo){
                 case 1:
-                    console.log(file);
+                  temp = file[id-1];
             }
             res.contentType('application/json');
-            res.send('working bitch');
+            res.send(temp);
         }else{
             console.log(err);
         }
