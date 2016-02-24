@@ -29,7 +29,7 @@ app.get('/destino', function(req, res) {
             }];**/
            /** res.contentType('application/json');
             res.send(JSON.stringify(historia));**/
-            leerJSON('historias.json',res, id);
+            leerJSON('destinos.json',res, id);
             break;
         case '2':
             var historia = [{
@@ -78,6 +78,8 @@ function leerJSON(archivo, res, tipo, id) {
             }
             res.contentType('application/json');
             res.send(file);
+        }else{
+            console.log(err);
         }
     });
 }
