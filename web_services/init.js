@@ -29,7 +29,7 @@ app.get('/destino', function(req, res) {
             }];**/
            /** res.contentType('application/json');
             res.send(JSON.stringify(historia));**/
-            leerJSON('destinos.json',res, id);
+            leerJSON('destinos',res, id);
             break;
         case '2':
             var historia = [{
@@ -70,7 +70,7 @@ function leerJSON(archivo, res, tipo, id) {
             var file = JSON.parse(data);
             switch(tipo){
                 case 1:
-                    console.log(file[id-1]);
+                    console.log(file);
                     
                     
                     
