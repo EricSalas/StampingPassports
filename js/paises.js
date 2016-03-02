@@ -45,7 +45,7 @@ $(document).ready(function() {
             '</div>'+
             '<div class="col-md-5 cursor">'+
                 '<h3><span>'+h.titulo1+'</span>'+'<span style="color:gray">'+h.titulo2+'</span></h3>'+
-                '<p>'+h.fecha+'</p>'+
+                '<p><span class="glyphicon glyphicon-time"></span> '+h.fecha+'</p>'+
                 '<a class="btn btn-primary" href="#">Leer historia <span class="glyphicon glyphicon-chevron-right"></span></a>'+
             '</div>'+
         '</div>'+

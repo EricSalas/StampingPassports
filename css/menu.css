@@ -1,0 +1,24 @@
+.navbar{
+	background-color: transparent;
+	border-style: none;
+	/** box-shadow: 0 2px 3px rgba(0,0,0,.4);**/
+}
+
+.navbar-inverse .navbar-nav>.open>a, .navbar-inverse .navbar-nav>.open>a:focus, .navbar-inverse .navbar-nav>.open>a:hover {
+	background-color:gray;
+}
+
+.navbar-inverse .navbar-nav>li>a{
+	color: white;
+	font-size:1.3em;
+}
+
+.navbar-nav li:hover {
+	background-color:#b8b8b8;
+}
+
+.navbar-collapse{
+	float:right;
+	font-family:"Helvetica Neue",Helvetica,Arial,sans-serif;
+	font-weight:300;
+}
