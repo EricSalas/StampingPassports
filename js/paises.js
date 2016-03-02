@@ -44,8 +44,8 @@ $(document).ready(function() {
                 '</a>'+
             '</div>'+
             '<div class="col-md-5 cursor">'+
-                '<h3 style="color:gray">'+h.titulo+'</h3>'+
-                '<h4>'+h.titulo2+'</h4>'+
+                '<h3"><span>'+h.titulo1+'</span><span style="color:gray">'+h.titulo2+'</span></h3>'+
+                '<h4>'+'</h4>'+
                 '<p>'+h.resumen+'</p>'+
                 '<a class="btn btn-primary" href="#">View Project <span class="glyphicon glyphicon-chevron-right"></span></a>'+
             '</div>'+
