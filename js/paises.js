@@ -44,10 +44,9 @@ $(document).ready(function() {
                 '</a>'+
             '</div>'+
             '<div class="col-md-5 cursor">'+
-                '<h3"><span>'+h.titulo1+'</span><span style="color:gray">'+h.titulo2+'</span></h3>'+
-                '<h4>'+'</h4>'+
-                '<p>'+h.resumen+'</p>'+
-                '<a class="btn btn-primary" href="#">View Project <span class="glyphicon glyphicon-chevron-right"></span></a>'+
+                '<h3><span>'+h.titulo1+'</span>'+'<span style="color:gray">'+h.titulo2+'</span></h3>'+
+                '<p>'+h.fecha+'</p>'+
+                '<a class="btn btn-primary" href="#">Leer historia <span class="glyphicon glyphicon-chevron-right"></span></a>'+
             '</div>'+
         '</div>'+
         '<hr>'
