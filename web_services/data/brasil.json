@@ -6,18 +6,15 @@
     "historias": [
         {
         "id": "1",
-    "titulo1": "Como es vivir en Sao Paulo, ",
-    "titulo2": "la mayor cuidad de America Latina.",
+        "titulo": "Como es vivir en São Paulo, la mayor cuidad de América Latina.",
         "foto": "sp1"
     }, {
         "id": "2",
-       "titulo1": "¿Qué hacer? ¿Qué conocer? en Río de Janeiro. ",
-    "titulo2": "La Cidade Maravilhosa.",
+        "titulo": "¿Qué hacer? ¿Qué conocer? en Río de Janeiro. La Cidade Maravilhosa.",
         "foto": "rio1"
     }, {
         "id": "3",
-          "titulo1": "Santos, ",
-    "titulo2": "la cuidad del rey Pelé y Neymar Jr.",
+        "titulo": "Santos, la cuidad del rey Pelé y Neymar Jr.",
         "foto": "santos1"
     }
     ]
