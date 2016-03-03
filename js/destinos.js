@@ -19,9 +19,8 @@ $(document).ready(function() {
                 if (destino.galeria !== undefined) {
                     var galeria = "";
                     $.each(destino.galeria, function(i, foto) {
-                        console.log( '<img src="img/destinos/'+destinoId+'/thumbnails/'+foto.img+'.jpg itemprop="thumbnail" alt="'+foto.texto+'" />');
                         galeria += '<figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">' +
-                        '<a href="img/destinos/'+destinoId+'/"'+foto.img+'.jpg itemprop="contentUrl">' +
+                        '<a itemprop="contentUrl" href="img/destinos/'+destinoId+'/"'+foto.img+'.jpg>' +
                         '<img src="img/destinos/'+destinoId+'/thumbnails/'+foto.img+'.jpg itemprop="thumbnail" alt="'+foto.texto+'" />' +
                         '</a>' +
                         '<figcaption itemprop="caption description">'+foto.texto+'</figcaption>' +
@@ -41,7 +40,7 @@ $(document).ready(function() {
 
 
 
-
+/**
     var initPhotoSwipeFromDOM = function(gallerySelector) {
 
         // parse slide data (url, title, size ...) from DOM elements 
@@ -250,7 +249,7 @@ $(document).ready(function() {
     };
 
     // execute above function
-    initPhotoSwipeFromDOM('.my-gallery');
+  initPhotoSwipeFromDOM('.my-gallery');**/
 
 
 
