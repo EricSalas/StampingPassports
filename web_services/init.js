@@ -20,24 +20,10 @@ app.get('/ultimosDestinos', function(req, res) {
 
 app.get('/destino', function(req, res) {
     var id = req.query.id;
-
-    /**
-    var historia = [{
-        "capa": "sp2",
-        "bandera": "br",
-        "cuidad": "Sao Paulo, Brasil",
-        "titulo1": "Como es vivir en Sao Paulo,",
-        "titulo2": "la mayor cuidad de America Latina.",
-        "fecha": "06 de marzo, 2016."
-    }];**/
-    /** res.contentType('application/json');
-     res.send(JSON.stringify(historia));**/
     leerJSON('destinos', res, 1, id);
-
 });
 
 function leerJSON(archivo, res, tipo, id) {
-    console.log('leer archivo');
     var fs = require('fs');
     fs.readFile('./data/' + archivo + '.json', 'utf8', function(err, data) {
         if (!err) {
@@ -46,17 +32,21 @@ function leerJSON(archivo, res, tipo, id) {
             switch (tipo) {
                 case 1:
                     /**Lectura de archivo de destinos en donde debe responderse solo con la data del destino**/
-                    resp = file[id - 1];
-                    if (resp === undefined) {
-                        resp = '0';
+                    
+		resp = file[id - 1];
+                    if ((resp === undefined) || (resp === id) || (resp === 'undefined')) {
+                        resp ="0";
                     }
+break;
                 case 2:
                     /**Lectura de archivo de paises en donde debe ir todo**/
                     resp = file;
+break;
                 case 3:
                     /**Lectura de archivo de destinos, pero solo deben de ir los tres ultimos objetos**/
                     var tam = file.length;
                     resp = file.slice((tam - 3), tam + 1);
+break;
 
 
             }
@@ -83,7 +73,6 @@ app.get('/pais', function(req, res) {
             var pais = leerJSON('brasil', res, 2);
             break;
         default:
-            console.log('llegue');
             res.send('0');
     }
 });
