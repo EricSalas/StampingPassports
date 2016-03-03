@@ -2,8 +2,8 @@
     "capa": "sp2",
     "img":"sp1",
     "bandera": "br",
-    "cuidad": "Sao Paulo, Brasil",
-    "titulo1": "Como es vivir en Sao Paulo, ",
+    "cuidad": "São Paulo, Brasil",
+    "titulo1": "Como es vivir en São Paulo, ",
     "titulo2": "la mayor cuidad de America Latina.",
     "resumen": "Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.",
     "fecha": "06 de marzo, 2016.",
@@ -18,7 +18,8 @@
     "titulo2": "La Cidade Maravilhosa.",
     "resumen": "Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.",
     "fecha": " 6 de marzo, 2016.",
-    "texto":""
+    "texto":"",
+     "galeria":[{"img":"2014-04-1912.51.24-min","texto":"Vista de la cuidad desde el edificio Martinelli. Edificios y más edificios."}]
 }, {
     "capa": "santos2",
     "img":"santos1",
