@@ -20,13 +20,13 @@ $(document).ready(function() {
                     var galeria = "";
                     $.each(destino.galeria, function(i, foto) {
                         galeria += '<figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">' +
-                        '<a itemprop="contentUrl" href="img/destinos/'+destinoId+'/"'+foto.img+'.jpg>' +
-                        '<img src="img/destinos/'+destinoId+'/thumbnails/'+foto.img+'.jpg itemprop="thumbnail" alt="'+foto.texto+'" />' +
-                        '</a>' +
-                        '<figcaption itemprop="caption description">'+foto.texto+'</figcaption>' +
-                        '</figure>';
+                            '<a href="img/destinos/' + destinoId + '/' + foto.img + '.jpg" itemprop="contentUrl" data-size="1024x683">' +
+                            '<img src="img/destinos/' + destinoId + '/thumbnails/' + foto.img + '.jpg" itemprop="thumbnail" alt="' + foto.texto + '" />' +
+                            '</a>' +
+                            '<figcaption itemprop="caption description">' + foto.texto + '</figcaption>' +
+                            '</figure>';
                     });
-                    $('.my-gallery').html('').html(galeria);
+                    $('.my-gallery').html(galeria);
                 }
             } else {
                 window.location = '/';
@@ -40,7 +40,6 @@ $(document).ready(function() {
 
 
 
-/**
     var initPhotoSwipeFromDOM = function(gallerySelector) {
 
         // parse slide data (url, title, size ...) from DOM elements 
@@ -249,7 +248,7 @@ $(document).ready(function() {
     };
 
     // execute above function
-  initPhotoSwipeFromDOM('.my-gallery');**/
+    initPhotoSwipeFromDOM('.my-gallery');
 
 
 
