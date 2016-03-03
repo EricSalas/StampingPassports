@@ -1,6 +1,10 @@
 $(document).ready(function() {
 
 
+        $('.carousel').carousel({
+            interval: 5000 //changes the speed
+        });
+
     (function() {
         $.ajax({
             'method': 'get',
@@ -49,7 +53,7 @@ $(document).ready(function() {
         }, 'slow');
     });
 
-    $(window).scroll(function(event) {
+   /** $(window).scroll(function(event) {
         var scroll = $(window).scrollTop();
 
         if (scroll >= ($('.post-header').offset().top) + 10) {
@@ -59,7 +63,7 @@ $(document).ready(function() {
         if (scroll <= ($('.post-header').offset().top) - 10) {
             $('.navbar').css('background-color', 'transparent');
         }
-    });
+    });**/
 
 
 });

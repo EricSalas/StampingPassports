@@ -30,7 +30,7 @@
 
     <!-- Custom styles for this template -->
     <link href="css/full-slider.css" rel="stylesheet">
-        <link href="css/menu.css" rel="stylesheet">
+    <link href="css/menu.css" rel="stylesheet">
     <link href="css/index.css" rel="stylesheet">
     <link href="css/flag-icon.min.css" rel="stylesheet">
 
@@ -41,22 +41,19 @@
 
 <body>
 
-    <!-- Navigation -->
-    <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+    <nav class="navbar navbar-inverse right" role="navigation">
         <div class="container">
-            <!-- Brand and toggle get grouped for better mobile display -->
             <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbarMobile">
                     <span class="sr-only">Toggle navigation</span>
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="#">Logo</a>
+                <a class="navbar-brand" href="#">Sellando pasaportes</a>
             </div>
-            <!-- Collect the nav links, forms, and other content for toggling -->
-            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                <ul class="nav navbar-nav">
+            <div class="collapse navbar-collapse navbarMobile">
+                <ul class="nav navbar-nav navbar-right">
                     <li>
                         <a href="#">Sobre</a>
                     </li>
@@ -64,32 +61,23 @@
                         <a class="dropdown-toggle" data-toggle="dropdown" href="#">Países
         <span class="caret"></span></a>
                         <ul class="dropdown-menu">
-                            <li><a href="#">Argentina <span class="flag-icon flag-icon-ar"></span></a></li>
-                            <li><a href="#">Bolivia <span class="flag-icon flag-icon-bo"></span></a></li>
-                            <li><a href="#">Brasil <span class="flag-icon flag-icon-br"></span></a></li>
-                            <li><a href="#">Chile <span class="flag-icon flag-icon-cl"></span></a></li>
-                            <li><a href="#">Costa Rica <span class="flag-icon flag-icon-cr"></span></a></li>
-                            <li><a href="#">Colombia <span class="flag-icon flag-icon-co"></span></a></li>
-                            <li><a href="#">Perú <span class="flag-icon flag-icon-pe"></span></a></li>
-                            <li><a href="#">Uruguay <span class="flag-icon flag-icon-uy"></span></a></li>
+                            <li><a class="pais" id="1" href="#">Argentina <span class="flag-icon flag-icon-ar"></span></a></li>
+                            <li><a class="pais" id="2" href="#">Bolivia <span class="flag-icon flag-icon-bo"></span></a></li>
+                            <li><a class="pais" id="3" href="#">Brasil <span class="flag-icon flag-icon-br"></span></a></li>
+                            <li><a class="pais" id="4" href="#">Chile <span class="flag-icon flag-icon-cl"></span></a></li>
+                            <li><a class="pais" id="5" href="#">Costa Rica <span class="flag-icon flag-icon-cr"></span></a></li>
+                            <li><a class="pais" id="6" href="#">Colombia <span class="flag-icon flag-icon-co"></span></a></li>
+                            <li><a class="pais" id="7" href="#">Perú <span class="flag-icon flag-icon-pe"></span></a></li>
+                            <li><a class="pais" id="8" href="#">Uruguay <span class="flag-icon flag-icon-uy"></span></a></li>
                         </ul>
                     </li>
                     <li>
                         <a href="#">Contacto</a>
                     </li>
-                    <!--<li class="dropdown">
-        <a class="dropdown-toggle" data-toggle="dropdown" href="#"><span class="flag-icon flag-icon-es"></span>
-        <span class="caret"></span></a>
-        <ul class="dropdown-menu">
-               <li><a href="#">English <span class="flag-icon flag-icon-gb"></span></a></li>
-                <li><a href="#">Português <span class="flag-icon flag-icon-br"></span></a></li>
-        </ul>
-      </li>-->
                 </ul>
             </div>
-            <!-- /.navbar-collapse -->
+
         </div>
-        <!-- /.container -->
     </nav>
 
 
@@ -182,8 +170,8 @@
 
         <!-- START THE FEATURETTES -->
         <b>      <h1 style="text-align:center" class="post-header">Últimos posts</h1></b>
-<div class="ultimosDestinos">
-       <!-- <hr class="featurette-divider">
+        <div class="ultimosDestinos">
+            <!-- <hr class="featurette-divider">
 
         <div class="row featurette">
             <div class="col-md-7">
@@ -247,6 +235,7 @@
     <script src="js/holder.min.js"></script>
     <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
     <script src="js/ie10-viewport-bug-workaround.js"></script>
+     <script src="js/menu.js"></script>
     <script src="js/index.js"></script>
 </body>
 

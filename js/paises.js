@@ -19,7 +19,6 @@ $(document).ready(function() {
                 var html = "";
                 if(pais['historias']!==undefined){
                 $.each(pais.historias, function(i, h) {
-                    console.log('holis');
                    /** html += '<div class="col-lg-3 col-md-3 col-sm-6 col-xs-12 cursor destino" id="'+h.id+'">' +
                         '<div class="panel panel-default">' +
                         '<div class="panel-heading">' +
@@ -56,7 +55,7 @@ $(document).ready(function() {
                 $('.destinos').html('').html(html);
             }
             }else{
-                //  window.location = '/';
+              window.location = '/';
             }
         },
         error: function() {
