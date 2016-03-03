@@ -8,7 +8,7 @@
     "resumen": "Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.",
     "fecha": "06 de marzo, 2016.",
     "texto":"",
-    "galeria":[{"image463637"},{"image463638"},{"image463639"}]
+    "galeria":["image463637","image463638","image463639"]
 }, {
     "capa": "rio2",
     "img":"rio1",
