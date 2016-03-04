@@ -3,7 +3,7 @@
     "img":"sp1",
     "bandera": "br",
     "cuidad": "São Paulo, Brasil",
-    "titulo1": "Como es vivir en São Paulo, ",
+    "titulo1": "Como <strike>es</strike> <i>fue</i> vivir en São Paulo, ",
     "titulo2": "la mayor cuidad de América Latina.",
     "resumen": "Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.",
     "fecha": "06 de marzo, 2016.",
