@@ -1,12 +1,16 @@
 $(document).ready(function() {
-
-
-    var destinoId = window.location.search.substring(4);
+   // var destinoId = window.location.search.substring(4);
+    var barra = window.location.search;
+    var destinoId = barra.substring(barra.indexOf("=")+1,barra.indexOf("&"));
+    var idioma = barra.substring(barra.indexOf("&")+4,barra.length);
+    console.log(destinoId);
+    console.log(idioma);
     $.ajax({
         method: 'get',
         url: 'http://ec2-52-10-12-157.us-west-2.compute.amazonaws.com:3500/destino',
         data: {
-            id: destinoId
+            id: destinoId,
+            lg:idioma
         },
         success: function(destino) {
             if (destino + "" !== '0') {
@@ -16,7 +20,7 @@ $(document).ready(function() {
                 $('#bandera').addClass('flag-icon-' + destino.bandera);
                 $('#capaHistoria').css('background-image', 'url(img/' + destino.capa + '.jpg)');
                 $('#fecha').text(destino.fecha);
-                $(".destino").html(destino.texto);
+                $(".destino").append(destino.resumen+destino.texto);
                 if (destino.galeria !== undefined) {
                     var galeria = "";
                     $.each(destino.galeria, function(i, foto) {
@@ -30,7 +34,7 @@ $(document).ready(function() {
                     $('.my-gallery').html(galeria);
                 }
             } else {
-                window.location = '/';
+             //   window.location = '/';
             }
         },
         error: function() {
