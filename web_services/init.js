@@ -20,6 +20,9 @@ app.get('/ultimosDestinos', function(req, res) {
 
 app.get('/destino', function(req, res) {
     var id = req.query.id;
+var lg = req.query.lg;
+console.log(id);
+console.log(lg);
     leerJSON('destinos', res, 1, id);
 });
 
