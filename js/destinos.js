@@ -5,6 +5,47 @@ $(document).ready(function() {
     var idioma = barra.substring(barra.indexOf("&")+4,barra.length);
     console.log(destinoId);
     console.log(idioma);
+    
+    
+
+       $.ajax({
+        method: 'get',
+        url: 'http://ec2-52-10-12-157.us-west-2.compute.amazonaws.com:3500/base',
+        data: {
+            id: destinoId
+        },
+        success: function(base) {
+            if (base + "" !== '0') {
+                $('#nombreCuidad').text(base.cuidad);
+                $('#capaHistoria').css('background-image', 'url(img/' + base.capa + '.jpg)');
+                if (base.galeria !== undefined) {
+                    var galeria = "";
+                    $.each(base.galeria, function(i, foto) {
+                        galeria += '<figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">' +
+                            '<a href="img/destinos/' + destinoId + '/' + foto.img + '.jpg" itemprop="contentUrl" data-size="1024x683">' +
+                            '<img src="img/destinos/' + destinoId + '/thumbnails/' + foto.img + '.jpg" itemprop="thumbnail" alt="' + foto.texto + '" />' +
+                            '</a>' +
+                            '<figcaption itemprop="caption description">' + foto.texto + '</figcaption>' +
+                            '</figure>';
+                    });
+                    $('.my-gallery').html(galeria);
+                }
+            } else {
+             //   window.location = '/';
+            }
+        },
+        error: function() {
+        }
+    });
+    
+    
+    
+    
+    
+    
+    
+    
+    
     $.ajax({
         method: 'get',
         url: 'http://ec2-52-10-12-157.us-west-2.compute.amazonaws.com:3500/destino',
@@ -38,9 +79,7 @@ $(document).ready(function() {
             }
         },
         error: function() {
-
         }
-
     });
 
 

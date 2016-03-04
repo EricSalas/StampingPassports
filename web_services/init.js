@@ -19,14 +19,19 @@ app.get('/ultimosDestinos', function(req, res) {
 });
 
 app.get('/destino', function(req, res) {
-var id = req.query.id;
-var lg = req.query.lg;
-    leerJSON('destinos-'+lg, res, 1, id);
+    var id = req.query.id;
+    var lg = req.query.lg;
+    leerJSON('destinos-' + lg, res, 1, id);
+});
+
+app.get('/base', function(req, res) {
+    var id = req.query.id;
+    leerJSON('base-destinos', res, 1, id);
 });
 
 app.get('/traduccion', function(req, res) {
-var lg = req.query.lg;
-    leerJSON('destinos-'+lg, res, 1);
+    var lg = req.query.lg;
+    leerJSON('destinos-' + lg, res, 1);
 });
 
 function leerJSON(archivo, res, tipo, id) {
@@ -38,32 +43,21 @@ function leerJSON(archivo, res, tipo, id) {
             switch (tipo) {
                 case 1:
                     /**Lectura de archivo de destinos en donde debe responderse solo con la data del destino**/
-                    
-		resp = file[id - 1];
+
+                    resp = file[id - 1];
                     if ((resp === undefined) || (resp === id) || (resp === 'undefined')) {
-                        resp ="0";
-                    }else{
-
-fs.readFile('./data/base-destinos.json','utf8',function(err,data){
-
-var file = JSON.parse(data);
-if(file!==undefined){
-
-console.log(file);
-
-}
-});
-}
-break;
+                        resp = "0";
+                    }
+                    break;
                 case 2:
                     /**Lectura de archivo de paises en donde debe ir todo**/
                     resp = file;
-break;
+                    break;
                 case 3:
                     /**Lectura de archivo de destinos, pero solo deben de ir los tres ultimos objetos**/
                     var tam = file.length;
                     resp = file.slice((tam - 3), tam + 1);
-break;
+                    break;
 
 
             }
