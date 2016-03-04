@@ -16,20 +16,20 @@ $(document).ready(function() {
         },
         success: function(base) {
             if (base + "" !== '0') {
-                $('#nombreCuidad').text(base.cuidad);
-                $('#capaHistoria').css('background-image', 'url(img/' + base.capa + '.jpg)');
                 if (base.galeria !== undefined) {
                     var galeria = "";
                     $.each(base.galeria, function(i) {
                         galeria += '<figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">' +
                             '<a href="img/destinos/' + destinoId + '/' + base.galeria[i] + '.jpg" itemprop="contentUrl" data-size="1024x683">' +
-                            '<img src="img/destinos/' + destinoId + '/thumbnails/' + base.galeria[i] + '.jpg" itemprop="thumbnail" alt="'  + '" />' +
+                            '<img class="img-galeria" src="img/destinos/' + destinoId + '/thumbnails/' + base.galeria[i] + '.jpg" itemprop="thumbnail" alt="'  + '" />' +
                             '</a>' +
-                            '<figcaption itemprop="caption description">'  + '</figcaption>' +
+                            '<figcaption  itemprop="caption description"></figcaption>' +
                             '</figure>';
                     });
                     $('.my-gallery').html(galeria);
                 }
+                                $('#nombreCuidad').text(base.cuidad);
+                $('#capaHistoria').css('background-image', 'url(img/' + base.capa + '.jpg)');
             } else {
              //   window.location = '/';
             }
@@ -37,14 +37,6 @@ $(document).ready(function() {
         error: function() {
         }
     });
-    
-    
-    
-    
-    
-    
-    
-    
     
     $.ajax({
         method: 'get',
@@ -61,16 +53,15 @@ $(document).ready(function() {
                 $('#fecha').text(destino.fecha);
                 $(".destino").append(destino.resumen+destino.texto);
                 if (destino.galeria !== undefined) {
-                    var galeria = "";
-                   /** $.each(destino.galeria, function(i, foto) {
-                        galeria += '<figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">' +
-                            '<a href="img/destinos/' + destinoId + '/' + foto.img + '.jpg" itemprop="contentUrl" data-size="1024x683">' +
-                            '<img src="img/destinos/' + destinoId + '/thumbnails/' + foto.img + '.jpg" itemprop="thumbnail" alt="' + foto.texto + '" />' +
-                            '</a>' +
-                            '<figcaption itemprop="caption description">' + foto.texto + '</figcaption>' +
-                            '</figure>';
-                    });
-                    $('.my-gallery').html(galeria);**/
+                    var fig = $('figcaption');
+                    var img = $('.img-galeria');
+                 $.each(destino.galeria,function(i){
+
+                    $(fig[i]).text(destino.galeria[i]);
+                    console.log($(fig[i]).text());
+                     $(img[i]).attr("alt",destino.galeria[i]);
+                     
+                 });
                 }
             } else {
              //   window.location = '/';
