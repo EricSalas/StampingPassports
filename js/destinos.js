@@ -11,11 +11,12 @@ $(document).ready(function() {
         success: function(destino) {
             if (destino + "" !== '0') {
                 $('#nombreCuidad').text(destino.cuidad);
-                $('#titulo1').text(destino.titulo1);
+                $('#titulo1').html(destino.titulo1);
                 $('#titulo2').text(destino.titulo2);
                 $('#bandera').addClass('flag-icon-' + destino.bandera);
                 $('#capaHistoria').css('background-image', 'url(img/' + destino.capa + '.jpg)');
                 $('#fecha').text(destino.fecha);
+                $(".destino").html(destino.texto);
                 if (destino.galeria !== undefined) {
                     var galeria = "";
                     $.each(destino.galeria, function(i, foto) {
