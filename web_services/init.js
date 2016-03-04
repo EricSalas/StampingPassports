@@ -19,11 +19,14 @@ app.get('/ultimosDestinos', function(req, res) {
 });
 
 app.get('/destino', function(req, res) {
-    var id = req.query.id;
+var id = req.query.id;
 var lg = req.query.lg;
-console.log(id);
-console.log(lg);
-    leerJSON('destinos', res, 1, id);
+    leerJSON('destinos-'+lg, res, 1, id);
+});
+
+app.get('/traduccion', function(req, res) {
+var lg = req.query.lg;
+    leerJSON('destinos-'+lg, res, 1);
 });
 
 function leerJSON(archivo, res, tipo, id) {
@@ -37,6 +40,7 @@ function leerJSON(archivo, res, tipo, id) {
                     /**Lectura de archivo de destinos en donde debe responderse solo con la data del destino**/
                     
 		resp = file[id - 1];
+		console.log(resp);
                     if ((resp === undefined) || (resp === id) || (resp === 'undefined')) {
                         resp ="0";
                     }
