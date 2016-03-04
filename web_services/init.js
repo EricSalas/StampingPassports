@@ -40,10 +40,20 @@ function leerJSON(archivo, res, tipo, id) {
                     /**Lectura de archivo de destinos en donde debe responderse solo con la data del destino**/
                     
 		resp = file[id - 1];
-		console.log(file);
                     if ((resp === undefined) || (resp === id) || (resp === 'undefined')) {
                         resp ="0";
-                    }
+                    }else{
+
+fs.readFile('./data/base-destinos.json','utf8',function(err,data){
+
+var file = JSON.parse(data);
+if(file!==undefined){
+
+console.log(file);
+
+}
+});
+}
 break;
                 case 2:
                     /**Lectura de archivo de paises en donde debe ir todo**/
