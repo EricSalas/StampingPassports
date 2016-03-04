@@ -3,8 +3,8 @@ $(document).ready(function() {
     var barra = window.location.search;
     var destinoId = barra.substring(barra.indexOf("=")+1,barra.indexOf("&"));
     var idioma = barra.substring(barra.indexOf("&")+4,barra.length);
-    console.log(destinoId);
-    console.log(idioma);
+  //  console.log(destinoId);
+    //console.log(idioma);
     
     
 
@@ -20,12 +20,12 @@ $(document).ready(function() {
                 $('#capaHistoria').css('background-image', 'url(img/' + base.capa + '.jpg)');
                 if (base.galeria !== undefined) {
                     var galeria = "";
-                    $.each(base.galeria, function(i, foto) {
+                    $.each(base.galeria, function(i) {
                         galeria += '<figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">' +
-                            '<a href="img/destinos/' + destinoId + '/' + foto.img + '.jpg" itemprop="contentUrl" data-size="1024x683">' +
-                            '<img src="img/destinos/' + destinoId + '/thumbnails/' + foto.img + '.jpg" itemprop="thumbnail" alt="' + foto.texto + '" />' +
+                            '<a href="img/destinos/' + destinoId + '/' + base.galeria[i] + '.jpg" itemprop="contentUrl" data-size="1024x683">' +
+                            '<img src="img/destinos/' + destinoId + '/thumbnails/' + base.galeria[i] + '.jpg" itemprop="thumbnail" alt="'  + '" />' +
                             '</a>' +
-                            '<figcaption itemprop="caption description">' + foto.texto + '</figcaption>' +
+                            '<figcaption itemprop="caption description">'  + '</figcaption>' +
                             '</figure>';
                     });
                     $('.my-gallery').html(galeria);
@@ -64,7 +64,7 @@ $(document).ready(function() {
                 $(".destino").append(destino.resumen+destino.texto);
                 if (destino.galeria !== undefined) {
                     var galeria = "";
-                    $.each(destino.galeria, function(i, foto) {
+                   /** $.each(destino.galeria, function(i, foto) {
                         galeria += '<figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">' +
                             '<a href="img/destinos/' + destinoId + '/' + foto.img + '.jpg" itemprop="contentUrl" data-size="1024x683">' +
                             '<img src="img/destinos/' + destinoId + '/thumbnails/' + foto.img + '.jpg" itemprop="thumbnail" alt="' + foto.texto + '" />' +
@@ -72,7 +72,7 @@ $(document).ready(function() {
                             '<figcaption itemprop="caption description">' + foto.texto + '</figcaption>' +
                             '</figure>';
                     });
-                    $('.my-gallery').html(galeria);
+                    $('.my-gallery').html(galeria);**/
                 }
             } else {
              //   window.location = '/';
