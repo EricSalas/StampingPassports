@@ -22,12 +22,12 @@ app.get('/destino', function(req, res) {
     var id = req.query.id;
     var lg = req.query.lg;
   //  leerJSON('destinos-' + lg, res, 1, id);
-  leerJSON('destinos' + lg, res, 1, id);
+  leerJSON('destinos', res, 1, id);
 });
 
 app.get('/base', function(req, res) {
     var id = req.query.id;
-    leerJSON('base-destinos', res, 1, id);
+ //   leerJSON('base-destinos', res, 1, id);
 });
 
 app.get('/traduccion', function(req, res) {
@@ -46,7 +46,7 @@ function leerJSON(archivo, res, tipo, id) {
                     /**Lectura de archivo de destinos en donde debe responderse solo con la data del destino**/
 
                     resp = file[id - 1];
-                    console.log(resp);
+                    console.log(resp.length);
                     if ((resp === undefined) || (resp === id) || (resp === 'undefined')) {
                         resp = "0";
                     }
