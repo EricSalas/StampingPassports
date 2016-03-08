@@ -48,7 +48,6 @@ function leerJSON(archivo, res, tipo, id,lg) {
                     if ((resp === undefined) || (resp === id) || (resp === 'undefined')) {
                         resp = "0";
                     }
-                    console.log(typeof(resp));
                     switch (lg) {
                         case 'en':
                             // code
@@ -58,7 +57,9 @@ function leerJSON(archivo, res, tipo, id,lg) {
                                 break;
                         
                         default:
-                            console.log('holis');
+console.log(resp[0]);
+                           delete resp[0];
+			console.log(resp.length);
                     }
                     break;
                 case 2:
