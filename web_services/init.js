@@ -38,7 +38,7 @@ app.get('/destino', function(req, res) {
     if (!estado) {
         lg = 'es';
     }
-
+console.log(lg);
     if (id !== undefined) {
         leerJSON('destinos', res, id, lg);
     } else {
@@ -60,7 +60,7 @@ function leerJSON(archivo, res, id, lg) {
             var file = JSON.parse(data);
             /**Lectura de archivo de destinos en donde debe responderse solo con la data del destino**/
             resp = file[id - 1];
-            if ((resp === undefined) || (resp === id) || (resp === 'undefined')) {
+            if ((resp === undefined) | (resp === 'undefined')) {
                 resp = "0";
             } else {
                 var temp;
