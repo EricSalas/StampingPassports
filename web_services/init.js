@@ -92,6 +92,7 @@ function leerJSON(archivo, res, id, lg) {
             res.send(resp);
         } else {
             console.log(err);
+            console.log('golis');
         }
     });
 }
