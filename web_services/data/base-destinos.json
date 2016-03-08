@@ -3,5 +3,15 @@
     "img":"sp1",
     "cuidad": "São Paulo, Brasil",
     "galeria":["2014-04-1912.51.24-min","2014-04-1912.45.02-min","2014-04-1911.43.31-min","2014-04-1911.43.26-min","2014-04-1909.26.33-min","2","3","2014-05-2913.21.24-min","2014-05-2912.48.23-1-min","1"]
+},
+{
+    "capa": "rio2",
+    "img":"rio1",
+    "cuidad": "Rio de Janeiro, Brasil"
+},
+{
+    "capa": "santos2",
+    "img":"santos1",
+    "cuidad": "Santos, São Paulo, Brasil"
 }
 ]

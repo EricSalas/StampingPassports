@@ -3,7 +3,7 @@ $(document).ready(function() {
 
     var paisId = window.location.search.substring(4);
 
-    $.ajax({
+   /** $.ajax({
         method: 'get',
         url: 'http://ec2-52-10-12-157.us-west-2.compute.amazonaws.com:3500/pais',
         data: {
@@ -35,7 +35,7 @@ $(document).ready(function() {
                             html = '<div class="row">'+html+'</div>';
                             indice = 0;
                         }**/
-                        
+                        /**
                         html+='<div class="row destino" id="'+h.id+'">'+
             '<div class="col-md-7 cursor">'+
                 '<a href="#">'+
@@ -62,14 +62,15 @@ $(document).ready(function() {
 
         }
 
-    });
+    });**/
 
 
 $('html').on('click','.destino',function(event){
     var destino = $(event.target);
     var id = destino.parents('.destino').attr('id');
-    if(id!==undefined){
-    window.location = 'destinos.html?id='+id;
+    var lg = destino.parents('.destino').attr('lg');
+    if(id!==undefined && lg!==undefined){
+    window.location = 'destinos.html?id='+id+'&lg='+lg;
     }
     
 });
