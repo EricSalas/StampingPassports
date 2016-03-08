@@ -5,12 +5,12 @@ $(document).ready(function() {
             interval: 5000 //changes the speed
         });
 
-    (function() {
+   /** (function() {
         $.ajax({
             'method': 'get',
             'url': 'http://ec2-52-10-12-157.us-west-2.compute.amazonaws.com:3500/ultimosDestinos',
             success: function(destinos) {
-                if (destinos !== undefined) {
+                if (destinos === undefined) {
                     var html = '';
                     $.each(destinos, function(i, v) {
                         if(i==0 || i==2){
