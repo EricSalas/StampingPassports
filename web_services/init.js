@@ -46,7 +46,6 @@ function leerJSON(archivo, res, tipo, id) {
                     /**Lectura de archivo de destinos en donde debe responderse solo con la data del destino**/
 
                     resp = file[id - 1];
-                    console.log(resp.length);
                     if ((resp === undefined) || (resp === id) || (resp === 'undefined')) {
                         resp = "0";
                     }
