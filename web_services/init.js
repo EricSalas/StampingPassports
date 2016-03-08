@@ -48,19 +48,21 @@ function leerJSON(archivo, res, tipo, id,lg) {
                     if ((resp === undefined) || (resp === id) || (resp === 'undefined')) {
                         resp = "0";
                     }
+var temp;
                     switch (lg) {
                         case 'en':
-                            // code
+                            temp = {base:resp[0],data:resp[3]};
                             break;
                             
                             case 'pt':
+					temp = {base:resp[0],data:resp[2]};
                                 break;
                         
                         default:
-console.log(resp[0]);
-                           delete resp[0];
-			console.log(resp.length);
+var temp = {base:resp[0],data:resp[1]};
+break;
                     }
+resp = temp;
                     break;
                 case 2:
                     /**Lectura de archivo de paises en donde debe ir todo**/
