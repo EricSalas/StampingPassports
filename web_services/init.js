@@ -62,32 +62,32 @@ function leerJSON(archivo, res, id, lg) {
             resp = file[id - 1];
             if ((resp === undefined) || (resp === id) || (resp === 'undefined')) {
                 resp = "0";
+            } else {
+                var temp;
+                switch (lg) {
+                    case 'en':
+                        temp = {
+                            base: resp[0],
+                            data: resp[3]
+                        };
+                        break;
+
+                    case 'pt':
+                        temp = {
+                            base: resp[0],
+                            data: resp[2]
+                        };
+                        break;
+
+                    default:
+                        var temp = {
+                            base: resp[0],
+                            data: resp[1]
+                        };
+                        break;
+                }
+                resp = temp;
             }
-            var temp;
-            switch (lg) {
-                case 'en':
-                    temp = {
-                        base: resp[0],
-                        data: resp[3]
-                    };
-                    break;
-
-                case 'pt':
-                    temp = {
-                        base: resp[0],
-                        data: resp[2]
-                    };
-                    break;
-
-                default:
-                    var temp = {
-                        base: resp[0],
-                        data: resp[1]
-                    };
-                    break;
-            }
-            resp = temp;
-
             res.contentType('application/json');
             res.send(resp);
         } else {

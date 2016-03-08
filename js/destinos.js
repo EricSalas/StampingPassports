@@ -47,6 +47,7 @@ $(document).ready(function() {
         },
         success: function(destino) {
             if (destino + "" !== '0') {
+                console.log(destino);
                 var base = destino.base;
                 var data = destino.data;
                 $('#titulo1').html(data.titulo1);
