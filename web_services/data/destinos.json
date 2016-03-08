@@ -1,4 +1,4 @@
-[{
+[
     [{
             "capa": "sp2",
             "img": "sp1",
@@ -24,8 +24,7 @@
         }
 
 
-    ]
-}, {
+    ],
     [{
         "capa": "rio2",
         "img": "rio1",
@@ -40,8 +39,7 @@
             "img": "2014-04-1912.51.24-min",
             "texto": "Vista de la cuidad desde el edificio Martinelli. Edificios y más edificios."
         }]
-    }]
-}, {
+    }],
     [{
         "capa": "santos2",
         "img": "santos1",
@@ -53,4 +51,4 @@
         "fecha": "6 de marzo, 2016.",
         "texto": ""
     }]
-}]
+]
