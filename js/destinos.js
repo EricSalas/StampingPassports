@@ -38,6 +38,9 @@ $(document).ready(function() {
         }
     });**/
 
+console.log(destinoId);
+console.log(idioma);
+
     $.ajax({
         method: 'get',
         url: 'http://ec2-52-10-12-157.us-west-2.compute.amazonaws.com:3500/destino',
@@ -46,8 +49,8 @@ $(document).ready(function() {
             lg: idioma
         },
         success: function(destino) {
+            console.log(destino);
             if (destino + "" !== '0') {
-                console.log(destino);
                 var base = destino.base;
                 var data = destino.data;
                 $('#titulo1').html(data.titulo1);

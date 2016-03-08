@@ -49,7 +49,7 @@ app.get('/destino', function(req, res) {
 
 app.get('/traduccion', function(req, res) {
     var lg = req.query.lg;
-    leerJSON('destinos-' + lg, res, 1);
+    leerJSON('destinos' + lg, res, 1);
 });
 
 function leerJSON(archivo, res, id, lg) {
@@ -60,7 +60,7 @@ function leerJSON(archivo, res, id, lg) {
             var file = JSON.parse(data);
             /**Lectura de archivo de destinos en donde debe responderse solo con la data del destino**/
             resp = file[id - 1];
-            if ((resp === undefined) || (resp === id) || (resp === 'undefined')) {
+            if ((resp === undefined)  || (resp === 'undefined')) {
                 resp = "0";
             } else {
                 var temp;
