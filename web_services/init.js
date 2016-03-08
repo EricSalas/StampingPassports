@@ -38,7 +38,7 @@ app.get('/destino', function(req, res) {
     if (!estado) {
         lg = 'es';
     }
-console.log(lg);
+
     if (id !== undefined) {
         leerJSON('destinos', res, id, lg);
     } else {
@@ -93,7 +93,6 @@ function leerJSON(archivo, res, id, lg) {
             res.send(resp);
         } else {
             console.log(err);
-            console.log('golis');
         }
     });
 }
