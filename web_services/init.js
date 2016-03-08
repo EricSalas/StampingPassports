@@ -17,7 +17,29 @@ app.use(function(req, res, next) {
 app.get('/destino', function(req, res) {
     var id = req.query.id;
     var lg = req.query.lg;
-    if (lg !== undefined && lg === 'es' | lg === 'en' | lg === 'pt') {
+    var estado;
+    switch (lg) {
+        case 'es':
+            estado = true;
+            break;
+        case 'en':
+            estado = true;
+            break;
+        case 'pt':
+            estado = true;
+            break;
+        case undefined:
+            estado = false;
+        default:
+            estado = false;
+            break;
+    }
+
+    if (!estado) {
+        lg = 'es';
+    }
+
+    if (id !== undefined) {
         leerJSON('destinos', res, id, lg);
     } else {
         res.contentType('application/json');
