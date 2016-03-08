@@ -1,12 +1,12 @@
 $(document).ready(function() {
-   // var destinoId = window.location.search.substring(4);
+    // var destinoId = window.location.search.substring(4);
     var barra = window.location.search;
-    var destinoId = barra.substring(barra.indexOf("=")+1,barra.indexOf("&"));
-    var idioma = barra.substring(barra.indexOf("&")+4,barra.length);
-  //  console.log(destinoId);
+    var destinoId = barra.substring(barra.indexOf("=") + 1, barra.indexOf("&"));
+    var idioma = barra.substring(barra.indexOf("&") + 4, barra.length);
+    //  console.log(destinoId);
     //console.log(idioma);
-    
-    
+
+    /**
 
        $.ajax({
         method: 'get',
@@ -36,39 +36,45 @@ $(document).ready(function() {
         },
         error: function() {
         }
-    });
-    
+    });**/
+
     $.ajax({
         method: 'get',
         url: 'http://ec2-52-10-12-157.us-west-2.compute.amazonaws.com:3500/destino',
         data: {
             id: destinoId,
-            lg:idioma
+            lg: idioma
         },
         success: function(destino) {
             if (destino + "" !== '0') {
-   
-                $('#titulo1').html(destino.titulo1);
-                $('#titulo2').text(destino.titulo2);
-                $('#fecha').text(destino.fecha);
-                $(".destino").append(destino.resumen+destino.texto);
-                if (destino.galeria !== undefined) {
-                    var fig = $('figcaption');
-                    var img = $('.img-galeria');
-                 $.each(destino.galeria,function(i){
+                var base = destino.base;
+                var data = destino.data;
+                $('#titulo1').html(data.titulo1);
+                $('#titulo2').text(data.titulo2);
+                $('#fecha').text(data.fecha);
+                $(".destino").append(data.resumen + data.texto);
+                if (base["fotos-galeria"] !== undefined) {
+                    var galeria = "";
+                    $.each(base["fotos-galeria"], function(i) {
+                        var temp = base["fotos-galeria"];
+                        var texto = data["texto-galeria"];
+                        galeria += '<figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">' +
+                            '<a href="img/destinos/' + destinoId + '/' + temp[i] + '.jpg" itemprop="contentUrl" data-size="1024x683">' +
+                            '<img class="img-galeria" src="img/destinos/' + destinoId + '/thumbnails/' + temp[i] + '.jpg" itemprop="thumbnail" alt="' + texto[i] + '" />' +
+                            '</a>' +
+                            '<figcaption  itemprop="caption description">' + texto[i] + '</figcaption>' +
+                            '</figure>';
+                    });
 
-                    $(fig[i]).text(destino.galeria[i]);
-                    console.log($(fig[i]).text());
-                     $(img[i]).attr("alt",destino.galeria[i]);
-                     
-                 });
                 }
+                $('#nombreCuidad').text(base.cuidad);
+                $('#capaHistoria').css('background-image', 'url(img/' + base.capa + '.jpg)');
+                $('.my-gallery').html(galeria);
             } else {
-             //   window.location = '/';
+                   window.location = '/';
             }
         },
-        error: function() {
-        }
+        error: function() {}
     });
 
 
