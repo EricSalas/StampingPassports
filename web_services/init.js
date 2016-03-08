@@ -22,7 +22,7 @@ app.get('/destino', function(req, res) {
     var id = req.query.id;
     var lg = req.query.lg;
   //  leerJSON('destinos-' + lg, res, 1, id);
-  leerJSON('destinos', res, 1, id);
+  leerJSON('destinos', res, 1, id,lg);
 });
 
 app.get('/base', function(req, res) {
@@ -35,7 +35,7 @@ app.get('/traduccion', function(req, res) {
     leerJSON('destinos-' + lg, res, 1);
 });
 
-function leerJSON(archivo, res, tipo, id) {
+function leerJSON(archivo, res, tipo, id,lg) {
     var fs = require('fs');
     fs.readFile('./data/' + archivo + '.json', 'utf8', function(err, data) {
         if (!err) {
@@ -44,10 +44,21 @@ function leerJSON(archivo, res, tipo, id) {
             switch (tipo) {
                 case 1:
                     /**Lectura de archivo de destinos en donde debe responderse solo con la data del destino**/
-
                     resp = file[id - 1];
                     if ((resp === undefined) || (resp === id) || (resp === 'undefined')) {
                         resp = "0";
+                    }
+                    console.log(typeof(resp));
+                    switch (lg) {
+                        case 'en':
+                            // code
+                            break;
+                            
+                            case 'pt':
+                                break;
+                        
+                        default:
+                            console.log('holis');
                     }
                     break;
                 case 2:
