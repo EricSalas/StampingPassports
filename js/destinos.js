@@ -49,7 +49,7 @@ console.log(idioma);
             lg: idioma
         },
         success: function(destino) {
-            console.log(destino);
+
             if (destino + "" !== '0') {
                 var base = destino.base;
                 var data = destino.data;
@@ -62,7 +62,7 @@ console.log(idioma);
                     $.each(base["fotos-galeria"], function(i) {
                         var temp = base["fotos-galeria"];
                         var texto = data["texto-galeria"];
-                        console.log(temp[i].id);
+            
                         galeria += '<figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">' +
                             '<a href="img/destinos/' + destinoId + '/' + (temp[i].id) + '.jpg" itemprop="contentUrl" data-size="'+(temp[i].tam)+'">' +
                             '<img class="img-galeria" src="img/destinos/' + destinoId + '/thumbnails/' + temp[i].id + '.jpg" itemprop="thumbnail" alt="' + texto[i] + '" />' +
