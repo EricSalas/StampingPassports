@@ -23,6 +23,10 @@ border-radius: 0;
 	font-size:1.3em;
 }
 
+.ir-arriba{
+	float:right;
+}
+
 
 @media only screen and (max-device-width : 720px) and (orientation : portrait) and (-webkit-min-device-pixel-ratio : 2) {
 .navbar{
