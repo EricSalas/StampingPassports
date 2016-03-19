@@ -56,7 +56,7 @@ console.log(idioma);
                 $('#titulo1').html(data.titulo1);
                 $('#titulo2').text(data.titulo2);
                 $('#fecha').text(data.fecha);
-               // $(".destino").append(data.resumen + data.texto);
+               $(".destino").append(data.resumen + data.texto);
                 if (base["fotos-galeria"] !== undefined) {
                     var galeria = "";
                     $.each(base["fotos-galeria"], function(i) {
