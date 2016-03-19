@@ -67,7 +67,7 @@ console.log(idioma);
                             '<a href="img/destinos/' + destinoId + '/' + (temp[i].id) + '.jpg" itemprop="contentUrl" data-size="'+(temp[i].tam)+'">' +
                             '<img class="img-galeria" src="img/destinos/' + destinoId + '/thumbnails/' + temp[i].id + '.jpg" itemprop="thumbnail" alt="' + texto[i] + '" />' +
                             '</a>' +
-                            '<figcaption  itemprop="caption description">' + texto[i] + '</figcaption>' +
+                            '<figcaption  itemprop="caption description">' + (texto[i]) + '</figcaption>' +
                             '</figure>';
                     });
 
