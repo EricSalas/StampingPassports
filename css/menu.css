@@ -30,6 +30,12 @@ border-radius: 0;
 	color:white;
 	z-index:2;
 }
+}
 
-
+@media only screen and (max-device-width : 720px) and (orientation : landscape) and (-webkit-min-device-pixel-ratio : 2) {
+.navbar{
+	background-color:black;
+	color:white;
+	z-index:2;
+}
 }
