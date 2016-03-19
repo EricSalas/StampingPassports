@@ -62,9 +62,10 @@ console.log(idioma);
                     $.each(base["fotos-galeria"], function(i) {
                         var temp = base["fotos-galeria"];
                         var texto = data["texto-galeria"];
+                        console.log(temp[i].id);
                         galeria += '<figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">' +
-                            '<a href="img/destinos/' + destinoId + '/' + temp[i] + '.jpg" itemprop="contentUrl" data-size="1024x683">' +
-                            '<img class="img-galeria" src="img/destinos/' + destinoId + '/thumbnails/' + temp[i] + '.jpg" itemprop="thumbnail" alt="' + texto[i] + '" />' +
+                            '<a href="img/destinos/' + destinoId + '/' + (temp[i].id) + '.jpg" itemprop="contentUrl" data-size="'+(temp[i].tam)+'">' +
+                            '<img class="img-galeria" src="img/destinos/' + destinoId + '/thumbnails/' + temp[i].id + '.jpg" itemprop="thumbnail" alt="' + texto[i] + '" />' +
                             '</a>' +
                             '<figcaption  itemprop="caption description">' + texto[i] + '</figcaption>' +
                             '</figure>';

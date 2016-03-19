@@ -4,7 +4,7 @@
             "img": "sp1",
             "bandera": "br",
             "cuidad": "São Paulo, Brasil",
-            "fotos-galeria": [{"id":"1","tam":"800x600"}, {"id":"2","tam":"512x683"}, {"id":"3","tam":"512x683"}, {"id":"4","tam":"384x512"}, {"id":"5","tam":"512x683"}, {"id":"6","tam":"512x683"}, {"id":"7","tam":"512x683"}, {"id":"8","tam":"512x683"}, {"id":"9","tam":"512x683"},{"id":"10","tam":"683x512"}]
+            "fotos-galeria": [{"id":"2","tam":"512x683"}, {"id":"3","tam":"512x683"}, {"id":"4","tam":"384x512"}, {"id":"5","tam":"512x683"}, {"id":"6","tam":"512x683"}, {"id":"7","tam":"512x683"}, {"id":"8","tam":"512x683"}, {"id":"9","tam":"512x683"},{"id":"10","tam":"683x512"},{"id":"1","tam":"800x600"}]
         }, {
             "titulo1": "Como <strike>es</strike> <i>fue</i> vivir en São Paulo, ",
             "titulo2": "la mayor cuidad de América Latina.",
