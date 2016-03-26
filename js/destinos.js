@@ -38,8 +38,6 @@ $(document).ready(function() {
         }
     });**/
 
-console.log(destinoId);
-console.log(idioma);
 
     $.ajax({
         method: 'get',
@@ -293,7 +291,6 @@ console.log(idioma);
 
     // execute above function
     initPhotoSwipeFromDOM('.my-gallery');
-
 
 
 });
