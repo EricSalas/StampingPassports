@@ -23,6 +23,10 @@ border-radius: 0;
 	font-size:1.3em;
 }
 
+.navbar-brand{
+	color:white !important;
+}
+
 .ir-arriba{
 	float:right;
 }
