@@ -60,7 +60,6 @@ function leerJSON(archivo, res, id, lg) {
             var file = JSON.parse(data);
             /**Lectura de archivo de destinos en donde debe responderse solo con la data del destino**/
             resp = file[id - 1];
-
             if ((resp === undefined) | (resp === 'undefined')) {
                 resp = "0";
             } else {
@@ -92,6 +91,7 @@ function leerJSON(archivo, res, id, lg) {
             res.contentType('application/json');
             res.send(resp);
         } else {
+console.log('ptq');
             console.log(err);
         }
     });
