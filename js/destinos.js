@@ -3,9 +3,7 @@ $(document).ready(function() {
     var barra = window.location.search;
     var destinoId = barra.substring(barra.indexOf("=") + 1, barra.indexOf("&"));
     var idioma = barra.substring(barra.indexOf("&") + 4, barra.length);
-    //  console.log(destinoId);
-    //console.log(idioma);
-
+    
     /**
 
        $.ajax({
@@ -74,7 +72,7 @@ $(document).ready(function() {
                 $('#capaHistoria').css('background-image', 'url(img/' + base.capa + '.jpg)');
                 $('.my-gallery').html(galeria);
             } else {
-                   window.location = '/';
+                  // window.location = '/';
             }
         },
         error: function() {}
