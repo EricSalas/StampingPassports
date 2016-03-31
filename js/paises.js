@@ -3,7 +3,12 @@ $(document).ready(function() {
 
     var paisId = window.location.search.substring(4);
     
-$('html').on('click','.destino',function(event){
+$('.btn').click(function(e){
+  e.preventDefault();
+});      
+         
+    
+$('html').on('click','.destino, .btn',function(event){
     var destino = $(event.target);
     var id = destino.parents('.destino').attr('id');
     var lg = destino.parents('.destino').attr('lg');
